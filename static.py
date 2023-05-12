@@ -28,9 +28,6 @@ for job_element in python_job_elements:
     print()
 
 for job_element in python_job_elements:
-    # -- snip --
-    links = job_element.find_all("a")
-    for link in links:
-        link_url = link["href"]
-        print(f"Apply here: {link_url}\n")
+    link_url = job_element.find_all("a")[1]["href"]
+    print(f"Apply here: {link_url}\n")
 
